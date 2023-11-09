@@ -19,6 +19,7 @@ CREATE TABLE produk(
     id_produk CHAR(50) PRIMARY KEY NOT NULL,
     nama VARCHAR(50) NOT NULL,
     kategori_id CHAR(50) NOT NULL,
+    jumlah_jual INT(5) NOT NULL,
     harga FLOAT NOT NULL,
     stok INT(5) NOT NULL,
     Foreign Key (kategori_id) REFERENCES kategori(id_kategori)
