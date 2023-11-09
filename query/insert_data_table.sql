@@ -25,17 +25,17 @@ INSERT INTO kategori (id_kategori, name) VALUES
 ('ctg-10', 'Makanan & Minuman');
 
 -- insert data produk
-INSERT INTO produk (id_produk, nama, kategori_id, harga, stok) VALUES
-('prd-1', 'Kemeja', 'ctg-1', 75000, 25),
-('prd-2', 'Sepatu Gunung', 'ctg-8', 300000, 30),
-('prd-3', 'Velg Rosi', 'ctg-3', 200000, 12),
-('prd-4', 'Keyboard Gaming', 'ctg-4', 159000, 32),
-('prd-5', 'Daster', 'ctg-2', 35000, 27),
-('prd-6', 'Lemari', 'ctg-6', 800000, 25),
-('prd-7', 'Kulkas', 'ctg-6', 1200000, 8),
-('prd-8', 'Casing Hp', 'ctg-7', 15000, 45),
-('prd-9', 'Kotak P3K', 'ctg-5', 30000, 32),
-('prd-10', 'Teh Gelas', 'ctg-10', 25000, 51);
+INSERT INTO produk (id_produk, nama, kategori_id, jumlah_jual, harga, stok) VALUES
+('prd-1', 'Kemeja', 'ctg-1', 1, 75000, 25),
+('prd-2', 'Sepatu Gunung', 'ctg-8', 1, 300000, 30),
+('prd-3', 'Velg Rosi', 'ctg-3', 1, 200000, 12),
+('prd-4', 'Keyboard Gaming', 1, 'ctg-4', 159000, 32),
+('prd-5', 'Daster', 'ctg-2', 1, 35000, 27),
+('prd-6', 'Lemari', 'ctg-6', 1, 800000, 25),
+('prd-7', 'Kulkas', 'ctg-6', 1, 1200000, 8),
+('prd-8', 'Casing Hp', 'ctg-7', 1, 15000, 45),
+('prd-9', 'Kotak P3K', 'ctg-5', 1, 30000, 32),
+('prd-10', 'Teh Gelas', 'ctg-10', 1, 25000, 51);
 
 -- insert data transaksi
 INSERT INTO transaksi (id_transaksi, pelanggan_id, produk_id, tgl_transaksi, jumlah, total_harga) VALUES
