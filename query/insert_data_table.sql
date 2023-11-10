@@ -29,7 +29,7 @@ INSERT INTO produk (id_produk, nama, kategori_id, jumlah_jual, harga, stok) VALU
 ('prd-1', 'Kemeja', 'ctg-1', 1, 75000, 25),
 ('prd-2', 'Sepatu Gunung', 'ctg-8', 1, 300000, 30),
 ('prd-3', 'Velg Rosi', 'ctg-3', 1, 200000, 12),
-('prd-4', 'Keyboard Gaming', 1, 'ctg-4', 159000, 32),
+('prd-4', 'Keyboard Gaming', 1, 'ctg-4', 150000, 32),
 ('prd-5', 'Daster', 'ctg-2', 1, 35000, 27),
 ('prd-6', 'Lemari', 'ctg-6', 1, 800000, 25),
 ('prd-7', 'Kulkas', 'ctg-6', 1, 1200000, 8),
@@ -38,14 +38,27 @@ INSERT INTO produk (id_produk, nama, kategori_id, jumlah_jual, harga, stok) VALU
 ('prd-10', 'Teh Gelas', 'ctg-10', 1, 25000, 51);
 
 -- insert data transaksi
-INSERT INTO transaksi (id_transaksi, pelanggan_id, produk_id, tgl_transaksi, jumlah, total_harga) VALUES
-('trns-1', 'plg-3', 'prd-2', '2023-10-25', 1, 300000),
-('trns-2', 'plg-1', 'prd-1', '2023-10-25', 2, 150000),
-('trns-3', 'plg-5', 'prd-5', '2023-10-27', 4, 140000),
-('trns-4', 'plg-2', 'prd-4', '2023-10-28', 1, 159000),
-('trns-5', 'plg-8', 'prd-9', '2023-10-28', 3, 90000),
-('trns-6', 'plg-4', 'prd-7', '2023-10-31', 1, 12000000),
-('trns-7', 'plg-6', 'prd-6', '2023-11-01', 3, 2400000),
-('trns-8', 'plg-9', 'prd-10', '2023-11-03', 5, 125000),
-('trns-9', 'plg-7', 'prd-3', '2023-11-04', 2, 400000),
-('trns-10', 'plg-6', 'prd-10', '2023-11-05', 4, 100000);
+INSERT INTO transaksi (id_transaksi, pelanggan_id, tgl_transaksi, jumlah_pembelian) VALUES
+('trns-1', 'plg-3', '2023-10-25', 300000),
+('trns-2', 'plg-1', '2023-10-25', 150000),
+('trns-3', 'plg-5', '2023-10-27', 140000),
+('trns-4', 'plg-2', '2023-10-28', 159000),
+('trns-5', 'plg-8', '2023-10-28', 90000),
+('trns-6', 'plg-4', '2023-10-31', 12000000),
+('trns-7', 'plg-6', '2023-11-01', 2400000),
+('trns-8', 'plg-9', '2023-11-03', 125000),
+('trns-9', 'plg-7', '2023-11-04', 400000),
+('trns-10', 'plg-6', '2023-11-05', 100000);
+
+-- insert data detail transaksi
+INSERT INTO detail_transaksi (id_detail, produk_id, transaksi_id, jumlah_beli, total_harga) VALUES
+('dtr-1', 'prd-1', 'trns-1', 2, 150000),
+('dtr-2', 'prd-2', 'trns-2', 2, 600000),
+('dtr-3', 'prd-3', 'trns-3', 1, 200000),
+('dtr-4', 'prd-4', 'trns-4', 1, 150000),
+('dtr-5', 'prd-5', 'trns-5', 4, 140000),
+('dtr-6', 'prd-6', 'trns-6', 3, 2400000),
+('dtr-7', 'prd-7', 'trns-7', 1, 1200000),
+('dtr-8', 'prd-8', 'trns-8', 4, 60000),
+('dtr-9', 'prd-9', 'trns-9', 2, 60000),
+('dtr-10', 'prd-10', 'trns-10', 2, 50000);
