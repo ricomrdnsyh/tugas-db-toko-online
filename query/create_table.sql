@@ -35,7 +35,7 @@ CREATE TABLE transaksi(
 );
 
 -- create table detail transaksi
-CREATE TABLE transaksi(
+CREATE TABLE detail_transaksi(
     id_detail CHAR(50) NOT NULL PRIMARY KEY,
     produk_id CHAR(50) NOT NULL,
     transaksi_id CHAR(50) NOT NULL,
