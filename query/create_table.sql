@@ -30,7 +30,7 @@ CREATE TABLE transaksi(
     id_transaksi CHAR(50) NOT NULL PRIMARY KEY,
     pelanggan_id CHAR(50) NOT NULL,
     tgl_transaksi DATE NOT NULL,
-    jumlah_pembelian FLOAT NOT NULL,
+    jumlah FLOAT NOT NULL,
     Foreign Key (pelanggan_id) REFERENCES pelanggan(id_pelanggan)
 );
 
@@ -39,6 +39,7 @@ CREATE TABLE detail_transaksi(
     id_detail CHAR(50) NOT NULL PRIMARY KEY,
     produk_id CHAR(50) NOT NULL,
     transaksi_id CHAR(50) NOT NULL,
+    jumlah_beli INT(5) NOT NULL,
     total_harga FLOAT NOT NULL,
     Foreign Key (produk_id) REFERENCES produk(id_produk),
     Foreign Key (transaksi_id) REFERENCES transaksi(id_transaksi)
